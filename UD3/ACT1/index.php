@@ -159,7 +159,7 @@
           Aqui estan las tareas de alex pardo
         </p>
         <p>
-          JE, JE :).
+          Solo esta corregido la ACT1, las demas están en proceso de correccion.(por si ves que algo igual de la act3 o algun link a la act2 desde la 1 no funciona, todavia no lo he terminado)
         </p>
       </div>
     </main>

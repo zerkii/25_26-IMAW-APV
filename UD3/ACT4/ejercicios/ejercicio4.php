@@ -29,6 +29,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="ejercicio3.php">ACT3 - Condicionales</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ejercicio4.php">ACT4 - Iteracion</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -39,68 +42,53 @@
         <h1 class="mt-5">3-Estructuras condicionales</h1>
         <section class="container">
           <article id="ejer3_1">
-            <h3>Ejercicio 3.1</h3>
+            <h3>Ejercicio 4.1</h3>
             <?php
-              // Cambia estos valores para probar las tres ramas
-              $a = 8;
-              $b = 5;
-
-              echo "a es $a y b es $b." . "<br>";
-
-              if ($a > $b) {
-                echo "a es mayor que b.";
-              } elseif ($a < $b) {
-                echo "a es menor que b.";
-              } else {
-                echo "Ambos números son iguales.";
-              }
+              $contador=1;
+              $final=20;
+              while ($contador<=$final)
+                {echo $contador;
+                if ($contador < $final) echo ", ";
+                $contador++;
+                }
             ?>
           </article>
 
           <article id="ejer3_2">
-            <h3>Ejercicio 3.2</h3>
+            <h3>Ejercicio 4.2</h3>
             <?php
-              // Usamos la clase Bombilla en recursos/bombilla.php
-              require_once '../recursos/bombilla.php';
-
-              $bombilla = new Bombilla();
-
-              // Ejemplo: encendemos la bombilla. Cambia a $bombilla->apagar(); para probar la otra rama.
-              $bombilla->encender();
-
-              // Según el enunciado, mostramos textos concretos según el estado.
-              if ($bombilla->getEncendida()) {
-                // Si está encendida -> mostrar las líneas exactas indicadas para el caso "encendida"
-                echo "La Bombilla está ahora apagada" . "<br>";
-                echo "Apaga esa luz, que me deslumbras!!!";
-              } else {
-                // Si está apagada -> mostrar las líneas exactas indicadas para el caso "apagada"
-                echo "La Bombilla está ahora encendida" . "<br>";
-                echo "No veo nada, da la luz!!!";
+              echo "<ul>";
+              for ($num=1;$num<=15;$num++){
+                echo "<li> $num </li>";
               }
+              echo "</ul>";
             ?>
           </article>
 
           <article id="ejer3_3">
-            <h3>Ejercicio 3.3</h3>
+            <h3>Ejercicio 4.3</h3>
+            <table class="table table-bordered text-center">
+            <tr>
             <?php
-              $color = 'Rojo'; // Prueba con 'Rojo', 'Verde', 'Amarillo' o cualquier otro valor
-
-              switch (strtolower($color)) {
-                case 'rojo':
-                  echo "Rojo es Gorria en Euskara y Red en Inglés";
-                  break;
-                case 'verde':
-                  echo "Verde es Berdea en Euskara y Green en Inglés";
-                  break;
-                case 'amarillo':
-                  echo "Amarillo es Horia en Euskara y Yellow en Inglés";
-                  break;
-                default:
-                  echo "Lo siento, pero no conozco el color $color";
-                  break;
-              }
+            $dias = array ("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+            foreach ($dias as $dia) {
+              echo "<th>$dia</th>";
+            }
             ?>
+            </tr>
+            </table>
+          </article>
+          <article id="ejer4_4">
+            <h3>Ejercicio 4.4</h3>
+            <table class="table table-bordered text-center">
+            <?php
+            $numero=1;
+            for ($columna=1; $columna<=8; $columna++)
+              while($numero<=8){
+              echo "<th>$numero</th>";
+              $numero++;}
+            ?>
+            </table>
           </article>
           <br><br>
         </section>

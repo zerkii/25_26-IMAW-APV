@@ -134,7 +134,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="ejercicios/ejercicio3.php">ACT3 - Condicionales</a>
               </li>
-              
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicios/ejercicio4.php">ACT4 - Itinerario</a>
+              </li>
             </ul>
             <form class="d-flex" role="search">
               <input

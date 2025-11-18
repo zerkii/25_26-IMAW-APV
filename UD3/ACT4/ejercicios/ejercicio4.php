@@ -39,7 +39,7 @@
     </header>
     <main class="flex-shrink-0">
       <div class="container">
-        <h1 class="mt-5">3-Estructuras condicionales</h1>
+        <h1 class="mt-5">4-Iteracion</h1>
         <section class="container">
           <article id="ejer3_1">
             <h3>Ejercicio 4.1</h3>
@@ -82,11 +82,15 @@
             <h3>Ejercicio 4.4</h3>
             <table class="table table-bordered text-center">
             <?php
-            $numero=1;
-            for ($columna=1; $columna<=8; $columna++)
-              while($numero<=8){
-              echo "<th>$numero</th>";
-              $numero++;}
+            for ($fila=1; $fila<=10; $fila++) {
+              echo "<tr>";
+              for ($columna=1; $columna<=8; $columna++) {
+                $valor = $fila * $columna;
+                $clase = ($valor % 2 == 0) ? 'bg-light' : 'bg-secondary';
+                echo "<td class='$clase text-dark'>$valor</td>";
+              }
+              echo "</tr>";
+            }
             ?>
             </table>
           </article>

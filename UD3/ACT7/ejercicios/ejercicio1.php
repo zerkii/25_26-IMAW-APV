@@ -112,21 +112,52 @@
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="..">Alex Pardo Vicente</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link" href="ejercicio1.php">ACT1 - Variables</a>
+                <a class="nav-link active" aria-current="page" href="ejercicio1.php">ACT1 - Variables</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="ejercicio2.php">ACT2 - Funciones y Clases</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="ejercicio3.php">ACT3 - Condicionales</a>
+                <a class="nav-link" href="ejercicio3.php">ACT3 - Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio4.php">ACT4 - Iteracion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio5.php">ACT5 - Formularios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio6.php">ACT6 - Cookies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio7.php">ACT7 - Ejercicio Final</a>
               </li>
             </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
         </div>
       </nav>
@@ -140,32 +171,58 @@
 					<h3>Ejercicio 1.1</h3>
 					<p>
 					<?php 
-						$nombre = "Alex";
-						echo "Hola " . $nombre . ", Bienvenido";
-					?>
+						
+            $nombre = "Alex";
+            echo "Hola<strong> " . $nombre . ", </strong>Bienvenido";
+						?>
 					</p>
 				</article>
 				<article id="ejer1_2">
 					<h3>Ejercicio 1.2</h3>
 						<?php 
-							$a = 8;
-							$b = 3;
-							echo "a = " . $a . "<br>";
-							echo "b = " . $b . "<br>";
-							echo "a + b = " . ($a + $b) . "<br>";
-							echo "a - b = " . ($a - $b) . "<br>";
-							echo "a * b = " . ($a * $b) . "<br>";
-							echo "a / b = " . ($a / $b) . "<br>";
-							echo "El resto de dividir a entre b es " . ($a % $b);
+						 
+                $a = 8;
+                $b = 3;
+
+                echo "Ejemplo con operadores combinados<br>";
+                echo "a =" . $a;
+                echo "<br>";
+                echo "b =" . $b;
+
+                echo "<br>";
+
+                $a += $b;
+                echo "a += b → $a<br>";
+
+                $a = 8;
+                $a -= $b;
+                echo "a -= b → $a<br>";
+
+                $a = 8;
+                $a *= $b;
+                echo "a *= b → $a<br>";
+
+                $a = 8;
+                $a /= $b;
+                echo "a /= b → $a<br>";
+
+                $a = 8;
+                $a %= $b;
+                echo "a %= b → $a<br>";
+                echo "El resto de dividir a entre b es 2"
 						?>
 				</article>
 				<article id="ejer1_3">
 					<h3>Ejercicio 1.3</h3>	
 						<?php 
-							$meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
-									"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-							$mes = 4;
-							echo "El mes " . $mes . " es " . $meses[$mes - 1] . ".";
+						 $meses = array(
+            "Enero", "Febrero", "Marzo", "Abril",
+            "Mayo", "Junio", "Julio", "Agosto",
+            "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        );
+
+        $mes = 4;
+        echo "El mes <strong>$mes</strong> es <strong>" . $meses[$mes - 1] . "</strong>.";
 						?>
 				</article>
 				<article id="ejer1_4">

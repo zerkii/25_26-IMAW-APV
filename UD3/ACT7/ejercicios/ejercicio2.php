@@ -112,7 +112,15 @@
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="..">Alex Pardo Vicente</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -121,12 +129,35 @@
                 <a class="nav-link" href="ejercicio1.php">ACT1 - Variables</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="ejercicio2.php">ACT2 - Funciones y Clases</a>
+                <a class="nav-link active" aria-current="page" href="ejercicio2.php">ACT2 - Funciones y Clases</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="ejercicio3.php">ACT3 - Condicionales</a>
+                <a class="nav-link" href="ejercicio3.php">ACT3 - Condicionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio4.php">ACT4 - Iteracion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio5.php">ACT5 - Formularios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio6.php">ACT6 - Cookies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicio7.php">ACT7 - Ejercicio Final</a>
               </li>
             </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
         </div>
       </nav>
@@ -134,55 +165,49 @@
     <!-- Begin page content -->
     <main class="flex-shrink-0">
       <div class="container">
-        <h1 class="mt-5">1-Tipos de variables</h1>
 		<section class="container">
-				<article id="ejer1_1">
-					<h3>Ejercicio 1.1</h3>
-					<p>
-					<?php 
-						$nombre = "Alex";
-						echo "Hola " . $nombre . ", Bienvenido";
-					?>
-					</p>
-				</article>
-				<article id="ejer1_2">
-					<h3>Ejercicio 1.2</h3>
-						<?php 
-							$a = 8;
-							$b = 3;
-							echo "a = " . $a . "<br>";
-							echo "b = " . $b . "<br>";
-							echo "a + b = " . ($a + $b) . "<br>";
-							echo "a - b = " . ($a - $b) . "<br>";
-							echo "a * b = " . ($a * $b) . "<br>";
-							echo "a / b = " . ($a / $b) . "<br>";
-							echo "El resto de dividir a entre b es " . ($a % $b);
+			<h2>2- Clases y Funciones</h2>
+			<article id="ejer2_1">
+				<h3>Ejercicio 2.1</h3>
+				<?php 
+      
+						require_once __DIR__.'/../recursos/bombilla.php';
+            $bombilla = new bombilla();
+            $bombilla->encender();
+            $bombilla->apagar();
 						?>
-				</article>
-				<article id="ejer1_3">
-					<h3>Ejercicio 1.3</h3>	
-						<?php 
-							$meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
-									"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-							$mes = 4;
-							echo "El mes " . $mes . " es " . $meses[$mes - 1] . ".";
+			</article>
+			<article id="ejer2_2">
+				<h3>Ejercicio 2.2</h3>
+				<?php 
+            require_once __DIR__.'/../recursos/trigonometria.php';
+						$cateto1 = 10;
+            $cateto2 = 15;
+            $hipotenusa = calcularhipotenusa($cateto1, $cateto2);
+            echo "<p>el triangulo con los catetos" .$cateto1. "y" .$cateto2. "tiene la hipotenusa" .$hipotenusa."</p>";
 						?>
-				</article>
-				<article id="ejer1_4">
-					<h3>Ejercicio 1.4</h3>					
-						<?php 
+			</article>
+			<article id="ejer2_3">
+				<h3>Ejercicio 2.3</h3>
+				<?php 
+						 // corregir la ruta de inclusión (estábamos en el directorio ejercicios)
+    require_once __DIR__ . '/../recursos/cubo.php';
+
+    $c = new Cubo(3.5);
+    echo "Tamaño: 3.5\n";
+    echo "Resuelto: " . ($c->getResuelto() ? 'sí' : 'no') . "\n";
+    $c->revolver(); // mostrará: Ahora está todo revuelto
+    echo "\nResuelto después de revolver: " . ($c->getResuelto() ? 'sí' : 'no') . "\n";
+						?>
+			</article>
+			<article id="ejer2_4">
+				<h3>Ejercicio 2.4</h3>
+				<?php 
 						//TO-DO
 						?>
-				</article>
-				<article id="ejer1_5">
-					<h3>Ejercicio 1.5</h3>					
-						<?php 
-						//TO-DO
-						?>
-				</article>
-				<br><br>
-			</section>
-      </div>
+			</article>
+		</section>
+	</div>
     </main>
     <footer class="footer mt-auto py-3 bg-body-tertiary">
       <div class="container">
